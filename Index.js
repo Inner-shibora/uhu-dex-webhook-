@@ -17,11 +17,4 @@ app.post('/', async (req, res) => {
   await fetch(TELEGRAM_API, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chat_id: CHAT_ID, text: msg }),
-  });
-
-  res.sendStatus(200);
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Webhook running on port ${PORT}`));
+    body: JSON.stringify({ chat_id: CHAT_ID, text: 
